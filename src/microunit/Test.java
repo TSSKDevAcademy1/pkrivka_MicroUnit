@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Test {
-	public Class<? extends Exception> Expected() default java.lang.Exception.class;
+	public Class<? extends Exception> Expected() default NoException.class;
 }
 	
 

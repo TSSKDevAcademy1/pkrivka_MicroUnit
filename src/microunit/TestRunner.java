@@ -53,9 +53,7 @@ public class TestRunner {
 					System.out.println(e);
 					e.printStackTrace();
 				}
-
 			}
-
 		}
 		annotation = PreDestroy.class;
 		runMethods(clazz, testCase);
@@ -69,9 +67,7 @@ public class TestRunner {
 				try {
 					method.invoke(testCase);
 				} catch (Exception e) {
-					e.getMessage();
-					System.out.println(e);
-					e.printStackTrace();
+					System.out.println(e.getMessage());
 				}
 			}
 		}
@@ -79,9 +75,6 @@ public class TestRunner {
 
 	public static void main(String[] args) throws Exception {
 		TestRunner runner = new TestRunner();
-
 		runner.processTestSuite("test");
-
 	}
-
 }
